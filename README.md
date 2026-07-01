@@ -50,7 +50,12 @@ npm run audit      # dependency vulnerability audit
    - **Build output directory:** `dist`
 4. (Optional) add the env vars from `.env.example` under
    **Settings → Environment variables**.
-5. Deploy. `public/_headers` and `public/_redirects` are applied automatically.
+5. Deploy. `public/_headers` (security headers) is applied automatically.
+
+> **SPA routing:** handled by Wrangler's asset config
+> `"not_found_handling": "single-page-application"` — do **not** add a
+> `_redirects` file, as `/* /index.html` rules conflict with it and cause an
+> infinite redirect loop on Cloudflare.
 
 ---
 
@@ -87,7 +92,7 @@ official menu. **Nothing is invented.**
 ## 🗂 Project structure
 
 ```
-public/            _headers, _redirects, robots, sitemap, manifest, assets
+public/            _headers, robots, sitemap, manifest, assets
 src/
   data/            siteConfig, services (pricing), testimonials, gallery
   hooks/           media query, scroll, body-scroll-lock
