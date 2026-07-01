@@ -1,0 +1,231 @@
+.contact {
+  background: var(--ivory);
+}
+
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
+}
+
+/* --- Info cards --- */
+.contact__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.contact__card {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  padding: 1.1rem;
+  transition: all var(--dur-fast) var(--ease-out);
+}
+.contact__card:hover {
+  border-color: var(--line-gold);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+.contact__icon {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: var(--r-sm);
+  flex-shrink: 0;
+  color: var(--gold-deep);
+  background: linear-gradient(145deg, var(--cream), var(--beige));
+}
+.contact__card strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+.contact__card p {
+  font-size: 0.85rem;
+  color: var(--warm-gray);
+  line-height: 1.4;
+}
+
+/* --- Hours --- */
+.contact__hours {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.contact__hours-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+.contact__hours-title svg {
+  color: var(--gold);
+}
+.contact__hours ul {
+  display: flex;
+  flex-direction: column;
+}
+.contact__hours li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px dashed var(--line);
+  font-size: 0.92rem;
+  color: var(--warm-gray);
+}
+.contact__hours li:last-child {
+  border-bottom: none;
+}
+.contact__hours li.is-today {
+  color: var(--ink);
+  font-weight: 600;
+}
+.contact__hours li.is-today em {
+  font-style: normal;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: var(--grad-gold);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--r-pill);
+}
+
+/* --- Map --- */
+.contact__map {
+  border-radius: var(--r-md);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  line-height: 0;
+}
+.contact__map iframe {
+  width: 100%;
+  height: 280px;
+  border: 0;
+  filter: grayscale(0.2) contrast(1.02);
+}
+
+/* --- Form --- */
+.contact__form-wrap {
+  position: sticky;
+  top: calc(var(--nav-h) + 1rem);
+}
+.contact__form {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact__form-title {
+  font-size: var(--fs-h3);
+  color: var(--ink);
+}
+.contact__form-sub {
+  color: var(--warm-gray);
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.contact__hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.contact__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.contact__field label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+.contact__field input,
+.contact__field select,
+.contact__field textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  background: var(--ivory);
+  font-size: 0.95rem;
+  transition: border-color var(--dur-fast) var(--ease-out),
+    box-shadow var(--dur-fast) var(--ease-out);
+}
+.contact__field textarea {
+  resize: vertical;
+  min-height: 96px;
+}
+.contact__field input:focus,
+.contact__field select:focus,
+.contact__field textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(198, 161, 91, 0.18);
+}
+.contact__field [aria-invalid='true'] {
+  border-color: #c0473b;
+}
+.contact__err {
+  font-size: 0.78rem;
+  color: #c0473b;
+}
+
+.contact__form .btn {
+  margin-top: 0.5rem;
+}
+
+.contact__status {
+  font-size: 0.88rem;
+  padding: 0.6rem 0.85rem;
+  border-radius: var(--r-sm);
+  text-align: center;
+}
+.contact__status--success {
+  color: #1f7a4d;
+  background: rgba(37, 211, 102, 0.12);
+}
+.contact__status--error {
+  color: #c0473b;
+  background: rgba(192, 71, 59, 0.1);
+}
+
+@media (max-width: 900px) {
+  .contact__grid {
+    grid-template-columns: 1fr;
+  }
+  .contact__form-wrap {
+    position: static;
+  }
+}
+@media (max-width: 460px) {
+  .contact__cards {
+    grid-template-columns: 1fr;
+  }
+}

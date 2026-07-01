@@ -1,0 +1,30 @@
+{
+  "name": "sk-unique-studio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "SK Unique Studio Salon — luxury beauty salon website (York, UK)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173",
+    "lint": "eslint . --ext js,jsx",
+    "audit": "npm audit --omit=dev"
+  },
+  "dependencies": {
+    "framer-motion": "^11.3.19",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.3",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.3",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "terser": "^5.31.3",
+    "vite": "^8.1.2"
+  },
+  "engines": {
+    "node": ">=20.19"
+  }
+}

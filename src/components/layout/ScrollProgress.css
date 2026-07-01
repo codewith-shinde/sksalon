@@ -1,0 +1,11 @@
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 1100;
+  transform-origin: 0 50%;
+  background: var(--grad-gold);
+  background-size: 200% auto;
+}

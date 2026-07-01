@@ -1,0 +1,80 @@
+.lazyimg {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--cream), var(--beige));
+  width: 100%;
+  height: 100%;
+}
+
+.lazyimg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.04);
+  transition: opacity 0.8s var(--ease-out), transform 1.2s var(--ease-out);
+}
+
+.lazyimg.is-loaded img {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* shimmer skeleton while loading */
+.lazyimg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    var(--cream) 20%,
+    var(--beige) 40%,
+    var(--cream) 60%
+  );
+  background-size: 220% 100%;
+  animation: lazyshimmer 1.6s var(--ease-in-out) infinite;
+  opacity: 1;
+  transition: opacity 0.5s var(--ease-out);
+}
+
+.lazyimg.is-loaded::before {
+  opacity: 0;
+}
+
+/* graceful fallback: elegant gold-tinted gradient + monogram */
+.lazyimg.is-failed::before {
+  animation: none;
+  background: linear-gradient(135deg, #efe6d6 0%, #e6d8c1 55%, #d9c4a0 100%);
+  opacity: 1;
+}
+.lazyimg.is-failed::after {
+  content: 'SK';
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  letter-spacing: 0.1em;
+  color: rgba(169, 127, 61, 0.4);
+}
+
+@keyframes lazyshimmer {
+  0% {
+    background-position: 180% 0;
+  }
+  100% {
+    background-position: -80% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lazyimg::before {
+    animation: none;
+  }
+  .lazyimg img {
+    transition: opacity 0.3s ease;
+    transform: none;
+  }
+}

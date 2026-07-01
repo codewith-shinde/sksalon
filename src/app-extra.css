@@ -1,0 +1,37 @@
+/* Small global extras that don't belong to a single component. */
+
+.section-fallback {
+  display: grid;
+  place-items: center;
+  min-height: 240px;
+  width: 100%;
+}
+.section-fallback__spinner {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 3px solid var(--beige);
+  border-top-color: var(--gold);
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Ensure floating mobile bar never covers the very bottom content */
+@media (max-width: 640px) {
+  body {
+    padding-bottom: 0;
+  }
+  .footer__bottom {
+    padding-bottom: calc(1.75rem + 56px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-fallback__spinner {
+    animation: none;
+  }
+}

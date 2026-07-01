@@ -1,0 +1,26 @@
+.stars {
+  display: inline-flex;
+  gap: 2px;
+  color: var(--gold);
+}
+.stars__item {
+  display: inline-flex;
+}
+.stars__fg {
+  fill: var(--gold);
+  stroke: var(--gold);
+}
+.stars__bg {
+  fill: rgba(169, 127, 61, 0.18);
+  stroke: rgba(169, 127, 61, 0.25);
+}
+.stars__half {
+  position: relative;
+  display: inline-flex;
+}
+.stars__clip {
+  position: absolute;
+  inset: 0;
+  width: 50%;
+  overflow: hidden;
+}

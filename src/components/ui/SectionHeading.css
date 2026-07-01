@@ -1,0 +1,50 @@
+.sec-head {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 760px;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.sec-head--center {
+  align-items: center;
+  text-align: center;
+  margin-inline: auto;
+}
+
+.sec-head--left {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.sec-head__title {
+  font-size: var(--fs-h2);
+  color: var(--ink);
+}
+
+.sec-head__title em {
+  font-style: italic;
+  display: inline-block;
+  /* room for italic overhang + descenders (g, y) so background-clip:text
+     doesn't clip them; negative margins keep spacing tight */
+  padding: 0.04em 0.2em 0.16em 0.02em;
+  margin: -0.04em -0.18em -0.12em 0;
+  background: var(--grad-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.sec-head__subtitle {
+  font-size: var(--fs-lead);
+  color: var(--warm-gray);
+  line-height: 1.65;
+  max-width: 60ch;
+}
+
+.sec-head--light .sec-head__title {
+  color: var(--white);
+}
+.sec-head--light .sec-head__subtitle {
+  color: rgba(255, 255, 255, 0.75);
+}

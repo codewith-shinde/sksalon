@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#FBF9F5" />
+
+    <!-- Security: Content Security Policy (meta fallback; prefer server headers in netlify.toml) -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' https://images.unsplash.com https://images.pexels.com data:; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://api.fontshare.com; font-src 'self' https://fonts.gstatic.com https://api.fontshare.com https://cdn.fontshare.com; connect-src 'self'; frame-src https://www.google.com https://maps.google.com; base-uri 'self'; form-action 'self'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests"
+    />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <!-- Primary Meta Tags -->
+    <title>SK Unique Studio | Luxury Beauty Salon in York — Nails, Facials, Lashes & More</title>
+    <meta
+      name="description"
+      content="SK Unique Studio is a premium beauty salon in the heart of York. Expert nails, facials, waxing, brows, lashes, massage & makeup. Book your appointment today. Rated 4.5★+."
+    />
+    <meta name="keywords" content="beauty salon York, nails York, facials York, eyelash extensions York, waxing York, eyebrows York, makeup artist York, massage York, SK Unique Studio" />
+    <meta name="author" content="SK Unique Studio" />
+    <link rel="canonical" href="https://www.skuniquestudio.co.uk/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="business.business" />
+    <meta property="og:title" content="SK Unique Studio | Luxury Beauty Salon in York" />
+    <meta property="og:description" content="Premium nails, facials, lashes, brows, waxing, massage & makeup in the heart of York. Beauty. Confidence. You." />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:url" content="https://www.skuniquestudio.co.uk/" />
+    <meta property="og:site_name" content="SK Unique Studio" />
+    <meta property="og:image" content="/images/og-cover.jpg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SK Unique Studio | Luxury Beauty Salon in York" />
+    <meta name="twitter:description" content="Premium beauty treatments in the heart of York. Beauty. Confidence. You." />
+    <meta name="twitter:image" content="/images/og-cover.jpg" />
+
+    <!-- Icons / PWA (SVG monogram now; drop in PNGs later for full coverage) -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Fonts: preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+    <!-- Inter + Sen (Google Fonts), Satoshi (Fontshare) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sen:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Structured Data: LocalBusiness / BeautySalon -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BeautySalon",
+        "name": "SK Unique Studio",
+        "image": "https://www.skuniquestudio.co.uk/images/og-cover.jpg",
+        "description": "Luxury beauty salon in York offering nails, facials, waxing, brows, lashes, massage and makeup.",
+        "@id": "https://www.skuniquestudio.co.uk/",
+        "url": "https://www.skuniquestudio.co.uk/",
+        "telephone": "+447404797054",
+        "email": "skuniquestudio@yahoo.com",
+        "priceRange": "££",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "10 Colliergate",
+          "addressLocality": "York",
+          "postalCode": "YO1 8BP",
+          "addressCountry": "GB"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 53.9605,
+          "longitude": -1.0803
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.5",
+          "reviewCount": "120"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "09:30",
+            "closes": "18:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Sunday",
+            "opens": "10:30",
+            "closes": "16:30"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <div style="padding: 2rem; font-family: sans-serif; text-align: center">
+        SK Unique Studio — Luxury beauty salon in York. Please enable JavaScript, or call us on
+        <a href="tel:+447404797054">+44 7404 797054</a> to book.
+      </div>
+    </noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
