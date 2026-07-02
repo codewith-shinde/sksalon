@@ -281,12 +281,21 @@
   }
 }
 
+/* Keep the SK logo fully visible on phones — hide the floating cards so
+   nothing overlaps the mark. The 4.5★ rating shows in the trust row above,
+   and "50+ treatments" appears in the About section. */
+@media (max-width: 600px) {
+  .hero__card {
+    display: none;
+  }
+  .hero__visual {
+    max-width: 380px;
+  }
+}
+
 @media (max-width: 480px) {
   .hero__actions .btn {
     width: 100%;
-  }
-  .hero__card--rating {
-    max-width: 180px;
   }
 }
 

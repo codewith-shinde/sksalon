@@ -138,8 +138,8 @@ export const serviceCategories = [
     description:
       'Flawless makeup artistry for every occasion — from a party-ready glam to complete bridal looks with trials, using premium, long-wear products.',
     image: {
-      src: IMG('1602910344008-22f323cc1817'),
-      alt: 'Makeup artist applying makeup to a client',
+      src: '/images/makeup-bridal.jpg',
+      alt: 'Bridal makeup application with veil and tiara',
     },
     fromPrice: 30,
     whatsappContext: 'Hello, I would like to enquire about makeup services.',

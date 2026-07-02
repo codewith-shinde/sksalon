@@ -13,8 +13,8 @@ const stats = [
 ];
 
 // Threading-led imagery — our signature craft leads the Our Story visual.
-const A1 =
-  'https://images.unsplash.com/photo-1519415387722-a1c3bbef716c?auto=format&fit=crop&w=900&q=80';
+// A1 is the salon's own threading photo (in /public/images).
+const A1 = '/images/our-story-threading.jpg';
 const A2 =
   'https://images.unsplash.com/photo-1589710751893-f9a6770ad71b?auto=format&fit=crop&w=800&q=80';
 
