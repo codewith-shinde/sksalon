@@ -26,8 +26,8 @@ export const serviceCategories = [
     description:
       'Our signature craft — traditional threading for precise, natural shaping across the brows and face, with clean symmetry that lasts.',
     image: {
-      src: IMG('1519415387722-a1c3bbef716c'),
-      alt: 'Precision eyebrow threading treatment in progress',
+      src: '/images/threading-card.jpg',
+      alt: 'Close-up of precise eyebrow threading in progress',
     },
     fromPrice: 8,
     whatsappContext: 'Hello, I would like to book a threading appointment.',
