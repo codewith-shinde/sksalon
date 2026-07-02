@@ -34,13 +34,13 @@ export const galleryImages = [
     span: 'wide',
   },
   {
-    src: IMG('1602910344008-22f323cc1817'),
-    alt: 'Makeup artist applying makeup to a client',
+    src: '/images/makeup-bridal.jpg',
+    alt: 'Bridal makeup application with veil and tiara',
     category: 'Makeup',
   },
   {
-    src: IMG('1519415387722-a1c3bbef716c'),
-    alt: 'Eyebrow threading treatment close-up',
+    src: '/images/threading-card.jpg',
+    alt: 'Close-up of precise eyebrow threading in progress',
     category: 'Brows',
     span: 'tall',
   },
