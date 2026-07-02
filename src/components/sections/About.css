@@ -124,10 +124,30 @@
     grid-template-columns: 1fr;
     gap: 3rem;
   }
+  /* Centre the Our Story collage in the middle of the screen on mobile */
   .about__visual {
     max-width: 480px;
     margin-inline: auto;
     width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .about__img--main {
+    width: 84%;
+    margin-inline: auto;
+  }
+  .about__img--sub {
+    width: 42%;
+    right: 4%;
+  }
+  .about__content {
+    text-align: center;
+  }
+  .about__text {
+    margin-inline: auto;
+  }
+  .about__points {
+    align-items: center;
   }
 }
 

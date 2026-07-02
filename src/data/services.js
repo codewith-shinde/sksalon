@@ -1,15 +1,14 @@
 /* =========================================================================
    SERVICES & PRICING — single source of truth.
 
-   Prices transcribed VERBATIM from the SK Unique Studio printed menu.
-   Do NOT invent or estimate prices. `price` is a number in GBP.
-   `from: true` renders a "from £X" label.
+   ⚠️  TRANSCRIBED VERBATIM from the SK Unique Studio printed menu.
+   The order of categories, the exact service names, capitalisation,
+   spelling, prices, `(from)` labels and duration labels — e.g. (45mins),
+   (1hr) — all mirror the printed menu EXACTLY. Do not reorder, rename,
+   merge, split, round or infer. The printed menu is the source of truth.
 
-   ⚠️  ONE SECTION NEEDS OWNER CONFIRMATION:
-   The bottom ~5 lines of "Nail Extensions" were hidden by the iOS share
-   overlay in the supplied photo. Confirmed/readable lines are included
-   below. The remaining lines are collected in `PENDING_CONFIRMATION` at the
-   bottom of this file — fill them in and move them into the nails group.
+   Only intentional deviation from the printed menu:
+   • "Extras" is set to `from £5` (owner correction; printed menu shows £15).
    ========================================================================= */
 
 // Images use curated REAL photography (Unsplash, free commercial licence).
@@ -21,63 +20,59 @@ const IMG = (id) =>
 
 export const serviceCategories = [
   {
-    id: 'nails',
-    name: 'Nails',
-    tagline: 'Sculpted, flawless, unmistakably you',
+    id: 'threading',
+    name: 'Threading',
+    tagline: 'Precision shaping, clean symmetry',
     description:
-      'From natural manicures to statement acrylic extensions, our nail artistry blends precision with the finest gels and finishes for a look that lasts.',
+      'Our signature craft — traditional threading for precise, natural shaping across the brows and face, with clean symmetry that lasts.',
     image: {
-      src: IMG('1604654894610-df63bc536371'),
-      alt: 'Close-up of elegant manicured nails with glossy polish',
+      src: IMG('1519415387722-a1c3bbef716c'),
+      alt: 'Precision eyebrow threading treatment in progress',
     },
-    fromPrice: 20,
-    whatsappContext: 'Hello, I would like to book a nail appointment.',
+    fromPrice: 8,
+    whatsappContext: 'Hello, I would like to book a threading appointment.',
     groups: [
       {
-        title: 'Natural Nails',
         items: [
-          { name: 'Mini Manicure', note: 'with regular polish', price: 20 },
-          { name: 'Mini Pedicure', note: 'with regular polish', price: 22 },
-          { name: 'Full Manicure', note: 'with regular polish', price: 25 },
-          { name: 'Full Pedicure', note: 'with regular polish', price: 40 },
+          { name: 'Eyebrows', price: 15 },
+          { name: 'Upper Lip', price: 8 },
+          { name: 'Chin', price: 8 },
+          { name: 'Forehead', price: 10 },
+          { name: 'Skin Fade', price: 12 },
+          { name: 'Neck', price: 12 },
+          { name: 'Full Face', price: 40 },
         ],
       },
+    ],
+  },
+
+  {
+    id: 'brows-lashes',
+    name: 'Brows & Lashes',
+    tagline: 'Defined brows, beautiful lashes',
+    description:
+      'Brow artistry and lash treatments — tint, henna, laminate, lifts and full lash sets applied with meticulous care for wide-awake, defined eyes.',
+    image: {
+      src: IMG('1589710751893-f9a6770ad71b'),
+      alt: 'Beautifully defined brows and lashes after treatment',
+    },
+    fromPrice: 12,
+    whatsappContext:
+      'Hello, I would like to enquire about brows & lashes services.',
+    groups: [
       {
-        title: 'Shellac & Gel Polish',
         items: [
-          { name: 'Mini Manicure', price: 30 },
-          { name: 'Full Manicure', price: 35 },
-          { name: 'Mini Pedicure', price: 32 },
-          { name: 'Full Pedicure', price: 45 },
-          { name: 'French Shellac Hands', price: 32 },
-          { name: 'French Shellac Feet', price: 35 },
-          { name: 'Shellac Take Off', price: 10 },
-          { name: 'Shellac Repair', price: 5, from: true },
-        ],
-      },
-      {
-        title: 'Nail Extensions',
-        items: [
-          { name: 'Full Set Acrylic', price: 45 },
-          { name: 'Full Set Ombre', price: 50 },
-          { name: 'Full Set French', price: 42 },
-          { name: 'Chrome Nails', price: 33 },
-          { name: 'Infills', price: 35 },
-          { name: 'Toes Extension', price: 35 },
-          { name: 'Full Set Toes & French', price: 42 },
-          // ⚠️ Remaining lines were hidden in the supplied photo —
-          //    see PENDING_CONFIRMATION at the bottom of this file.
-        ],
-      },
-      {
-        title: 'Finishing Touches',
-        items: [
-          {
-            name: 'Extras',
-            note: 'Gems, Stones, Polish Stickers, Foil, Glitters',
-            price: 15,
-            from: true,
-          },
+          { name: 'Eyebrow Tint', price: 12 },
+          { name: 'Eyelash Tint', price: 18 },
+          { name: 'Eyebrow Henna', price: 30 },
+          { name: 'Eyebrow Laminate', price: 45 },
+          { name: 'Lash Lift', price: 60 },
+          { name: 'Semi-Permanent Lashes', price: 45 },
+          { name: 'Individual Lashes', price: 60, from: true },
+          { name: 'Classic Set', price: 50 },
+          { name: 'Hybrid Set', price: 70, from: true },
+          { name: 'Russian Set', price: 80, from: true },
+          { name: 'Lash Removal', price: 15 },
         ],
       },
     ],
@@ -97,127 +92,13 @@ export const serviceCategories = [
     whatsappContext: 'Hello, I would like to enquire about your facials.',
     groups: [
       {
-        title: 'Facials & Skin',
         items: [
-          { name: 'Regular Clean Up', price: 40 },
-          { name: 'Luxury Simple Facial', note: '45 mins', price: 50 },
-          { name: 'Deep Cleansing Facial', note: '60 mins', price: 70 },
-          { name: 'Gold Facial', note: '1 hr', price: 90 },
+          { name: 'Regular Clean up', price: 40 },
+          { name: 'Luxury Simple Facial', note: '45mins', price: 50 },
+          { name: 'Deep Cleansing Facial', note: '60mins', price: 70 },
+          { name: 'Gold Facial', note: '1hr', price: 90 },
           { name: 'Hydrafacial with LED Therapy', price: 120 },
           { name: 'Full Face Bleach', price: 25 },
-        ],
-      },
-    ],
-  },
-
-  {
-    id: 'brows',
-    name: 'Brows & Threading',
-    tagline: 'Framed to perfection',
-    description:
-      'Expert threading and brow artistry — precise shaping, tinting, henna and laminate to define your features with clean, natural symmetry.',
-    image: {
-      src: IMG('1519415387722-a1c3bbef716c'),
-      alt: 'Eyebrow threading treatment in progress',
-    },
-    fromPrice: 8,
-    whatsappContext:
-      'Hello, I would like to enquire about eyebrow / threading services.',
-    groups: [
-      {
-        title: 'Threading',
-        items: [
-          { name: 'Eyebrows', price: 15 },
-          { name: 'Upper Lip', price: 8 },
-          { name: 'Chin', price: 8 },
-          { name: 'Forehead', price: 10 },
-          { name: 'Skin Fade', price: 12 },
-          { name: 'Neck', price: 12 },
-          { name: 'Full Face', price: 40 },
-        ],
-      },
-      {
-        title: 'Brow Treatments',
-        items: [
-          { name: 'Eyebrow Tint', price: 12 },
-          { name: 'Eyebrow Henna', price: 30 },
-          { name: 'Eyebrow Laminate', price: 45 },
-        ],
-      },
-    ],
-  },
-
-  {
-    id: 'lashes',
-    name: 'Lashes',
-    tagline: 'Effortless, wide-awake eyes',
-    description:
-      'From a natural lash lift to full-volume Russian sets, our lash treatments are applied with meticulous care for beautiful, long-lasting definition.',
-    image: {
-      src: IMG('1589710751893-f9a6770ad71b'),
-      alt: 'Eyelash extension application close-up',
-    },
-    fromPrice: 15,
-    whatsappContext: 'Hello, I would like to book an eyelash appointment.',
-    groups: [
-      {
-        title: 'Lashes',
-        items: [
-          { name: 'Eyelash Tint', price: 18 },
-          { name: 'Lash Lift', price: 60 },
-          { name: 'Semi-Permanent Lashes', price: 45 },
-          { name: 'Individual Lashes', price: 60, from: true },
-          { name: 'Classic Set', price: 50 },
-          { name: 'Hybrid Set', price: 70, from: true },
-          { name: 'Russian Set', price: 80, from: true },
-          { name: 'Lash Removal', price: 15 },
-        ],
-      },
-    ],
-  },
-
-  {
-    id: 'waxing',
-    name: 'Waxing',
-    tagline: 'Smooth, gentle, thorough',
-    description:
-      'Professional waxing for face and body using premium wax for a smooth, comfortable finish — from delicate facial areas to full-body treatments.',
-    image: {
-      src: IMG('1661308675370-31455561e15e'),
-      alt: 'Smooth, hair-free skin after a professional wax',
-    },
-    fromPrice: 10,
-    whatsappContext: 'Hello, I would like to enquire about waxing services.',
-    groups: [
-      {
-        title: 'Face',
-        items: [
-          { name: 'Eyebrow Waxing', price: 18 },
-          { name: 'Upper Lip', price: 10 },
-          { name: 'Chin', price: 10 },
-          { name: 'Side Face', price: 12 },
-          { name: 'Neck', price: 12 },
-          { name: 'Forehead', price: 10 },
-          { name: 'Nose', price: 10 },
-          { name: 'Full Face', price: 45 },
-        ],
-      },
-      {
-        title: 'Body',
-        items: [
-          { name: 'Underarm', price: 15 },
-          { name: 'Half Arm', price: 12 },
-          { name: 'Full Arm', price: 22 },
-          { name: 'Half Leg', note: 'ankles to knees', price: 22 },
-          { name: 'Full Leg', note: 'ankles to hips', price: 45 },
-          { name: 'Full Leg & Bikini', price: 55 },
-          { name: 'Bikini', price: 20 },
-          { name: 'Brazilian', price: 30 },
-          { name: 'Hollywood', price: 40 },
-          { name: 'Full Back', price: 30 },
-          { name: 'Chest', price: 25 },
-          { name: 'Tummy', price: 15 },
-          { name: 'Full Body', note: 'including face', price: 160 },
         ],
       },
     ],
@@ -237,13 +118,12 @@ export const serviceCategories = [
     whatsappContext: 'Hello, I would like to book a massage.',
     groups: [
       {
-        title: 'Massage',
         items: [
-          { name: 'Head Massage', note: '15 mins', price: 20 },
-          { name: 'Back, Neck & Shoulder', note: '30 mins', price: 35 },
+          { name: 'Head Massage', note: '15mins', price: 20 },
+          { name: 'Back, Neck & Shoulder', note: '30mins', price: 35 },
           {
             name: 'Ultimate Relaxation Full Body Massage',
-            note: '1 hr',
+            note: '1hr',
             price: 70,
           },
         ],
@@ -253,7 +133,7 @@ export const serviceCategories = [
 
   {
     id: 'makeup',
-    name: 'Makeup',
+    name: 'Make Up',
     tagline: 'Occasion-ready glamour',
     description:
       'Flawless makeup artistry for every occasion — from a party-ready glam to complete bridal looks with trials, using premium, long-wear products.',
@@ -265,10 +145,9 @@ export const serviceCategories = [
     whatsappContext: 'Hello, I would like to enquire about makeup services.',
     groups: [
       {
-        title: 'Make Up',
         items: [
           { name: 'Full Face Glam', price: 50 },
-          { name: 'Party Make Up', price: 50, from: true },
+          { name: 'Party Make up', price: 50, from: true },
           { name: 'Bridal Trials', price: 60 },
           { name: 'Bridal Makeup', price: 150, from: true },
           { name: 'Eye Makeup', price: 30 },
@@ -278,25 +157,38 @@ export const serviceCategories = [
   },
 
   {
-    id: 'more',
-    name: 'Piercings & Candling',
-    tagline: 'Signature extras',
+    id: 'ear-candling',
+    name: 'Ear Candling',
+    tagline: 'Gentle, traditional care',
     description:
-      'Complete your visit with our additional treatments — traditional Hopi ear candling and professional ear & nose piercing with aftercare.',
+      'Traditional Hopi ear candling — a calm, gentle treatment to soothe and relax.',
+    image: {
+      src: IMG('1600721391776-b5cd0e0048f9'),
+      alt: 'Calm, relaxing treatment room',
+    },
+    fromPrice: 30,
+    whatsappContext: 'Hello, I would like to book Hopi ear candling.',
+    groups: [
+      {
+        items: [{ name: 'Hopi Ear Candling', price: 30 }],
+      },
+    ],
+  },
+
+  {
+    id: 'piercings',
+    name: 'Piercings',
+    tagline: 'Safe, professional piercing',
+    description:
+      'Professional ear and nose piercing carried out with care, plus aftercare to keep you comfortable.',
     image: {
       src: IMG('1600721391776-b5cd0e0048f9'),
       alt: 'Close-up of an ear with an elegant gold earring',
     },
     fromPrice: 15,
-    whatsappContext:
-      'Hello, I would like to enquire about piercing / ear candling.',
+    whatsappContext: 'Hello, I would like to enquire about piercing.',
     groups: [
       {
-        title: 'Ear Candling',
-        items: [{ name: 'Hopi Ear Candling', price: 30 }],
-      },
-      {
-        title: 'Piercings',
         items: [
           { name: 'Ear Piercing', price: 50 },
           { name: 'Nose Piercing', price: 40 },
@@ -305,29 +197,168 @@ export const serviceCategories = [
       },
     ],
   },
+
+  {
+    id: 'waxing',
+    name: 'Waxing',
+    tagline: 'Smooth, gentle, thorough',
+    description:
+      'Professional waxing for face and body using premium wax for a smooth, comfortable finish — from delicate facial areas to full-body treatments.',
+    image: {
+      src: IMG('1661308675370-31455561e15e'),
+      alt: 'Smooth, hair-free skin after a professional wax',
+    },
+    fromPrice: 10,
+    whatsappContext: 'Hello, I would like to enquire about waxing services.',
+    groups: [
+      {
+        items: [
+          { name: 'Eyebrow Waxing', price: 18 },
+          { name: 'Upper Lip', price: 10 },
+          { name: 'Chin', price: 10 },
+          { name: 'Side Face', price: 12 },
+          { name: 'Neck', price: 12 },
+          { name: 'Forehead', price: 10 },
+          { name: 'Nose', price: 10 },
+          { name: 'Full Face', price: 45 },
+          { name: 'Underarm', price: 15 },
+          { name: 'Half Arm', price: 12 },
+          { name: 'Full Arm', price: 22 },
+          { name: 'Half Leg', note: 'ankles to knees', price: 22 },
+          { name: 'Full Leg', note: 'ankles to hips', price: 45 },
+          { name: 'Full Leg & Bikini', price: 55 },
+          { name: 'Bikini', price: 20 },
+          { name: 'Brazilian', price: 30 },
+          { name: 'Hollywood', price: 40 },
+          { name: 'Full Back', price: 30 },
+          { name: 'Chest', price: 25 },
+          { name: 'Tummy', price: 15 },
+          { name: 'Full Body', note: 'including face', price: 160 },
+        ],
+      },
+    ],
+  },
+
+  {
+    id: 'natural-nails',
+    name: 'Natural Nails',
+    tagline: 'Clean, classic, cared-for',
+    description:
+      'Manicures and pedicures with regular polish — precise, beautifully finished natural nails.',
+    image: {
+      src: IMG('1604654894610-df63bc536371'),
+      alt: 'Close-up of elegant manicured natural nails',
+    },
+    fromPrice: 20,
+    whatsappContext: 'Hello, I would like to book a natural nails appointment.',
+    groups: [
+      {
+        items: [
+          { name: 'Mini Manicure', note: 'with regular polish', price: 20 },
+          { name: 'Mini Pedicure', note: 'with regular polish', price: 22 },
+          { name: 'Full Manicure', note: 'with regular polish', price: 25 },
+          { name: 'Full Pedicure', note: 'with regular polish', price: 40 },
+        ],
+      },
+    ],
+  },
+
+  {
+    id: 'shellac-gel',
+    name: 'Shellac & Gel Polish',
+    tagline: 'Long-lasting, high-shine colour',
+    description:
+      'High-shine, long-lasting shellac and gel polish for hands and feet, including French finishes.',
+    image: {
+      src: IMG('1604654894610-df63bc536371'),
+      alt: 'Glossy shellac gel polish manicure',
+    },
+    fromPrice: 5,
+    whatsappContext: 'Hello, I would like to book a shellac / gel appointment.',
+    groups: [
+      {
+        items: [
+          { name: 'Mini Manicure', price: 30 },
+          { name: 'Full Manicure', price: 35 },
+          { name: 'Mini Pedicure', price: 32 },
+          { name: 'Full Pedicure', price: 45 },
+          { name: 'French Shellac Hands', price: 32 },
+          { name: 'French Shellac Feet', price: 35 },
+          { name: 'Shellac Take off', price: 10 },
+          { name: 'Shellac Repair', price: 5, from: true },
+        ],
+      },
+    ],
+  },
+
+  {
+    id: 'nail-extensions',
+    name: 'Nail Extensions',
+    tagline: 'Sculpted, statement nails',
+    description:
+      'Statement acrylic and builder gel extensions — full sets, ombre, French, chrome and more, sculpted with precision.',
+    image: {
+      src: IMG('1604654894610-df63bc536371'),
+      alt: 'Close-up of sculpted acrylic nail extensions',
+    },
+    fromPrice: 10,
+    whatsappContext: 'Hello, I would like to book nail extensions.',
+    groups: [
+      {
+        items: [
+          { name: 'Full Set Acrylic', price: 45 },
+          { name: 'Full Set Ombre', price: 50 },
+          { name: 'Full Set French', price: 42 },
+          { name: 'Chrome Nails', price: 33 },
+          { name: 'Infills', price: 35 },
+          { name: 'Toes Extension', price: 35 },
+          { name: 'Full Set Toes & French', price: 42 },
+          { name: 'Overlays', price: 35 },
+          { name: 'Builder Gel', price: 30 },
+          { name: 'Builder Gel Extensions', price: 40 },
+          { name: 'Builder Gel Extensions with French', price: 43 },
+          { name: 'Builder Gel French', price: 35 },
+          { name: 'Take off Acrylic', price: 15 },
+          { name: 'Acrylic Repair', price: 10 },
+        ],
+      },
+    ],
+  },
+
+  {
+    id: 'extra',
+    name: 'Extra',
+    tagline: 'Finishing touches',
+    description:
+      'Add-on finishing touches to make your nails your own — gems, stones, polish stickers, foil and glitters.',
+    image: {
+      src: IMG('1604654894610-df63bc536371'),
+      alt: 'Decorative nail art finishing touches',
+    },
+    fromPrice: 5,
+    whatsappContext: 'Hello, I would like to enquire about nail extras.',
+    groups: [
+      {
+        items: [
+          {
+            name: 'Extras',
+            note: 'Gems, Stones, Polish Stickers, Foil, Glitters',
+            price: 5,
+            from: true,
+          },
+        ],
+      },
+    ],
+  },
 ];
 
-/* -------------------------------------------------------------------------
-   ⚠️ OWNER: please confirm the Nail Extensions lines hidden in the photo.
-   The last visible partial line read "Over…  £35" (likely "Overlay").
-   Add the correct name/price for each, then move them into the
-   nails → "Nail Extensions" group above. Nothing here is displayed on the
-   site until you move it up, so no guessed prices are ever shown.
-   ------------------------------------------------------------------------- */
-export const PENDING_CONFIRMATION = [
-  // { name: 'Overlay', price: 35 },
-  // { name: '???',     price: 0 },
-  // { name: '???',     price: 0 },
-  // { name: '???',     price: 0 },
-];
-
-// Convenience: the 7 headline categories shown in the Services showcase.
+// Convenience: the headline categories shown in the Services showcase.
 export const featuredServiceIds = [
-  'nails',
+  'threading',
+  'brows-lashes',
   'facials',
-  'brows',
-  'lashes',
   'waxing',
   'massage',
   'makeup',
+  'nail-extensions',
 ];

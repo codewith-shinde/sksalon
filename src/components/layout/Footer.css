@@ -1,8 +1,27 @@
 .footer {
-  background: var(--ink);
-  color: rgba(255, 255, 255, 0.72);
+  background: var(--grad-espresso);
+  color: rgba(255, 255, 255, 0.78);
   padding-top: clamp(3.5rem, 7vw, 6rem);
   position: relative;
+  overflow: hidden;
+}
+
+.footer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+      ellipse at 12% 0%,
+      rgba(227, 201, 137, 0.16),
+      transparent 55%
+    ),
+    radial-gradient(ellipse at 95% 120%, rgba(198, 161, 91, 0.14), transparent 55%);
+}
+
+.footer > * {
+  position: relative;
+  z-index: 1;
 }
 
 .footer::before {

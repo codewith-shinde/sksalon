@@ -129,6 +129,12 @@
   white-space: nowrap;
   font-size: 0.98rem;
 }
+.pricing__from {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.78rem;
+  color: var(--warm-gray);
+}
 
 .pricing__footnote {
   text-align: center;

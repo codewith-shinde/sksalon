@@ -84,7 +84,11 @@ export default function Footer() {
             <li>
               <Icon name="clock" size={18} />
               <span>
-                Mon–Sat {openingHours[0].hours}
+                Mon–Wed {openingHours[0].hours}
+                <br />
+                Thu–Fri {openingHours[3].hours}
+                <br />
+                Sat {openingHours[5].hours}
                 <br />
                 Sun {openingHours[6].hours}
               </span>

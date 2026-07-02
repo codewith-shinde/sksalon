@@ -5,7 +5,6 @@ import SectionHeading from '../ui/SectionHeading';
 import Button from '../ui/Button';
 import Icon from '../ui/Icon';
 import { serviceCategories } from '../../data/services';
-import { formatPrice } from '../../utils/format';
 import { whatsappLink } from '../../utils/whatsapp';
 
 export default function Pricing() {
@@ -81,11 +80,13 @@ export default function Pricing() {
             </div>
 
             <div className="pricing__groups">
-              {current.groups.map((group) => (
-                <div className="pricing__group" key={group.title}>
-                  <h4 className="pricing__group-title">
-                    <Icon name="sparkle" size={15} /> {group.title}
-                  </h4>
+              {current.groups.map((group, gi) => (
+                <div className="pricing__group" key={group.title || gi}>
+                  {group.title && (
+                    <h4 className="pricing__group-title">
+                      <Icon name="sparkle" size={15} /> {group.title}
+                    </h4>
+                  )}
                   <ul className="pricing__list">
                     {group.items.map((item) => (
                       <li className="pricing__row" key={item.name + item.price}>
@@ -97,7 +98,10 @@ export default function Pricing() {
                         </span>
                         <span className="pricing__dots" aria-hidden="true" />
                         <span className="pricing__amount">
-                          {formatPrice(item.price, item.from)}
+                          {item.from && (
+                            <span className="pricing__from">(from) </span>
+                          )}
+                          £{item.price}
                         </span>
                       </li>
                     ))}

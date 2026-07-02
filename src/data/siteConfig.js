@@ -36,13 +36,13 @@ export const business = {
 };
 
 export const openingHours = [
-  { day: 'Monday', hours: '09:30 — 18:30' },
-  { day: 'Tuesday', hours: '09:30 — 18:30' },
-  { day: 'Wednesday', hours: '09:30 — 18:30' },
-  { day: 'Thursday', hours: '09:30 — 18:30' },
-  { day: 'Friday', hours: '09:30 — 18:30' },
-  { day: 'Saturday', hours: '09:30 — 18:30' },
-  { day: 'Sunday', hours: '10:30 — 16:30' },
+  { day: 'Monday', hours: '10:00 - 7:00' },
+  { day: 'Tuesday', hours: '10:00 - 7:00' },
+  { day: 'Wednesday', hours: '10:00 - 7:00' },
+  { day: 'Thursday', hours: '10:00 - 8:00' },
+  { day: 'Friday', hours: '10:00 - 8:00' },
+  { day: 'Saturday', hours: '9:30 - 5:30' },
+  { day: 'Sunday', hours: 'Closed' },
 ];
 
 // No social profiles yet. Add entries here to show icons in the footer, e.g.

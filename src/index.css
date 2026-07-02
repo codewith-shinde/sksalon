@@ -35,6 +35,18 @@
   );
   --grad-cream: linear-gradient(180deg, #fbf9f5 0%, #f6f1e9 100%);
 
+  /* Soft, warm GOLDEN section backgrounds (replaces cold near-black).
+     Deep champagne-brown tinted with the logo gold — luxurious, still
+     dark enough to carry light text at AA contrast. */
+  --espresso: #4a3a1c;
+  --espresso-deep: #2c2110;
+  --grad-espresso: linear-gradient(
+    158deg,
+    #5a451f 0%,
+    #43331a 42%,
+    #33270f 100%
+  );
+
   /* ---- Typography ---- */
   --font-display: 'Satoshi', 'Sen', system-ui, sans-serif;
   --font-heading: 'Sen', 'Satoshi', system-ui, sans-serif;
@@ -95,6 +107,8 @@ html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
   scroll-padding-top: var(--nav-h);
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {

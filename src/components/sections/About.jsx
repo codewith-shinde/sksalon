@@ -12,11 +12,11 @@ const stats = [
   { value: '5000+', label: 'Happy clients' },
 ];
 
-// Genuine beauty/treatment imagery (not the salon's own premises).
+// Threading-led imagery — our signature craft leads the Our Story visual.
 const A1 =
-  'https://images.unsplash.com/photo-1570174006382-148305ce4972?auto=format&fit=crop&w=900&q=80';
+  'https://images.unsplash.com/photo-1519415387722-a1c3bbef716c?auto=format&fit=crop&w=900&q=80';
 const A2 =
-  'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80';
+  'https://images.unsplash.com/photo-1589710751893-f9a6770ad71b?auto=format&fit=crop&w=800&q=80';
 
 export default function About() {
   return (
@@ -26,22 +26,22 @@ export default function About() {
           <Reveal direction="right" className="about__img about__img--main">
             <LazyImage
               src={A1}
-              alt="Relaxing body treatment in progress at a beauty studio"
+              alt="Precision eyebrow threading treatment in progress"
               ratio="4/5"
             />
           </Reveal>
           <Reveal direction="up" delay={0.15} className="about__img about__img--sub">
             <LazyImage
               src={A2}
-              alt="Luxury spa products, candle and flowers"
+              alt="Beautifully defined brows and lashes after treatment"
               ratio="1/1"
             />
           </Reveal>
           <Reveal delay={0.3} className="about__badge">
             <Icon name="sparkle" size={22} />
             <div>
-              <strong>Est. York</strong>
-              <span>City-centre studio</span>
+              <strong>Expert Threading</strong>
+              <span>Our signature craft</span>
             </div>
           </Reveal>
         </div>
@@ -65,9 +65,12 @@ export default function About() {
           </Reveal>
           <Reveal delay={0.22}>
             <p className="about__text">
-              From precision nails and results-driven facials to flawless lashes,
-              brows and bridal makeup, our skilled team treats every client with
-              warmth, care and meticulous attention to detail.
+              Threading is our signature craft. Using the traditional technique,
+              our therapists shape your brows with fine, precise control for
+              clean, natural symmetry that lasts — from a quick eyebrow tidy to
+              full-face threading. Alongside it we offer flawless lashes,
+              results-driven facials, nails, waxing and bridal makeup, every
+              treatment delivered with meticulous care.
             </p>
           </Reveal>
 

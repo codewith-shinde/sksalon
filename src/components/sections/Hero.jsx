@@ -77,9 +77,9 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
           >
-            Nails, facials, lashes, brows, waxing, massage &amp; makeup —
-            delivered with meticulous care in a calm, luxurious space in the
-            heart of York.
+            Expert threading, nails, facials, lashes, brows, waxing, massage
+            &amp; makeup — delivered with meticulous care in a calm, luxurious
+            space in the heart of York.
           </motion.p>
 
           <motion.div
@@ -155,7 +155,8 @@ export default function Hero() {
         <div className="hero__marquee-track">
           {[...Array(2)].map((_, r) => (
             <span key={r}>
-              Nails <Icon name="sparkle" size={14} /> Facials{' '}
+              Threading <Icon name="sparkle" size={14} /> Nails{' '}
+              <Icon name="sparkle" size={14} /> Facials{' '}
               <Icon name="sparkle" size={14} /> Lashes{' '}
               <Icon name="sparkle" size={14} /> Brows{' '}
               <Icon name="sparkle" size={14} /> Waxing{' '}

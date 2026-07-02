@@ -140,7 +140,11 @@
   .nav__toggle {
     display: inline-flex;
   }
-  .nav__cta {
+  /* Higher specificity than the base `.btn` rule so the top-bar CTA is
+     reliably hidden on mobile regardless of CSS bundle order. Leaving it
+     visible overflows the fixed navbar and forces a page-wide horizontal
+     scroll. */
+  .nav__actions .nav__cta {
     display: none;
   }
 }
