@@ -2,7 +2,7 @@ import './CTABand.css';
 import Reveal from '../ui/Reveal';
 import Button from '../ui/Button';
 import Icon from '../ui/Icon';
-import { whatsappLink, telLink } from '../../utils/whatsapp';
+import { whatsappLink } from '../../utils/whatsapp';
 
 export default function CTABand() {
   return (
@@ -27,16 +27,13 @@ export default function CTABand() {
         </Reveal>
         <Reveal delay={0.1}>
           <p className="ctaband__text">
-            Book your treatment in seconds — message us on WhatsApp or call the
-            studio directly. We can&apos;t wait to welcome you.
+            Book your treatment in seconds — just message us on WhatsApp. We
+            can&apos;t wait to welcome you.
           </p>
         </Reveal>
         <Reveal delay={0.2} className="ctaband__actions">
           <Button href={whatsappLink()} variant="dark" size="lg" icon="whatsapp">
             Book on WhatsApp
-          </Button>
-          <Button href={telLink()} variant="outline" size="lg" icon="phone">
-            Call the studio
           </Button>
         </Reveal>
       </div>

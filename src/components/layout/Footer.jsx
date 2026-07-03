@@ -3,7 +3,7 @@ import Logo from '../ui/Logo';
 import Icon from '../ui/Icon';
 import { business, navLinks, socials, openingHours } from '../../data/siteConfig';
 import { serviceCategories } from '../../data/services';
-import { whatsappLink, telLink } from '../../utils/whatsapp';
+import { whatsappLink } from '../../utils/whatsapp';
 
 export default function Footer() {
   const year = 2026;
@@ -66,10 +66,6 @@ export default function Footer() {
                 {business.address.line1}, {business.address.city},{' '}
                 {business.address.postcode}
               </a>
-            </li>
-            <li>
-              <Icon name="phone" size={18} />
-              <a href={telLink()}>{business.phoneDisplay}</a>
             </li>
             <li>
               <Icon name="whatsapp" size={18} />

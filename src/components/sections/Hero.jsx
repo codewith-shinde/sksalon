@@ -6,7 +6,7 @@ import Icon from '../ui/Icon';
 import Stars from '../ui/Stars';
 import Logo from '../ui/Logo';
 import { business } from '../../data/siteConfig';
-import { whatsappLink, telLink } from '../../utils/whatsapp';
+import { whatsappLink } from '../../utils/whatsapp';
 import { usePrefersReducedMotion } from '../../hooks/useMediaQuery';
 
 const headline = ['Where', 'beauty', 'meets', 'artistry'];
@@ -90,9 +90,6 @@ export default function Hero() {
           >
             <Button href={whatsappLink()} variant="dark" size="lg" icon="whatsapp">
               Book Appointment
-            </Button>
-            <Button href={telLink()} variant="outline" size="lg" icon="phone">
-              Call Now
             </Button>
           </motion.div>
 

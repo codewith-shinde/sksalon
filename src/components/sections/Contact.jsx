@@ -5,7 +5,7 @@ import Reveal from '../ui/Reveal';
 import Icon from '../ui/Icon';
 import Button from '../ui/Button';
 import { business, openingHours } from '../../data/siteConfig';
-import { whatsappLink, telLink } from '../../utils/whatsapp';
+import { whatsappLink } from '../../utils/whatsapp';
 import { sanitizeInput, isValidEmail, isValidPhone } from '../../utils/format';
 import { serviceCategories } from '../../data/services';
 
@@ -121,15 +121,6 @@ export default function Contact() {
                     {business.address.line1}, {business.address.city},{' '}
                     {business.address.postcode}
                   </p>
-                </div>
-              </a>
-              <a className="contact__card" href={telLink()}>
-                <span className="contact__icon">
-                  <Icon name="phone" size={22} />
-                </span>
-                <div>
-                  <strong>Call us</strong>
-                  <p>{business.phoneDisplay}</p>
                 </div>
               </a>
               <a

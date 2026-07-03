@@ -1,9 +1,8 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import './FloatingActions.css';
 import Icon from '../ui/Icon';
-import { whatsappLink, telLink } from '../../utils/whatsapp';
+import { whatsappLink } from '../../utils/whatsapp';
 import { useScrolled } from '../../hooks/useScrolled';
-import { business } from '../../data/siteConfig';
 
 export default function FloatingActions() {
   const showTop = useScrolled(600);
@@ -43,12 +42,8 @@ export default function FloatingActions() {
         )}
       </AnimatePresence>
 
-      {/* Sticky mobile call + WhatsApp bar */}
+      {/* Sticky mobile WhatsApp bar */}
       <div className="mobilebar" role="group" aria-label="Quick contact">
-        <a className="mobilebar__btn mobilebar__btn--call" href={telLink()}>
-          <Icon name="phone" size={20} />
-          <span>Call {business.phoneDisplay}</span>
-        </a>
         <a
           className="mobilebar__btn mobilebar__btn--wa"
           href={whatsappLink()}
@@ -56,7 +51,7 @@ export default function FloatingActions() {
           rel="noopener noreferrer"
         >
           <Icon name="whatsapp" size={20} />
-          <span>WhatsApp</span>
+          <span>Message us on WhatsApp</span>
         </a>
       </div>
     </>

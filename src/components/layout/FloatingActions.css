@@ -106,10 +106,6 @@
   font-size: 0.9rem;
   font-weight: 600;
 }
-.mobilebar__btn--call {
-  background: var(--grad-gold);
-  color: var(--ink);
-}
 .mobilebar__btn--wa {
   background: linear-gradient(145deg, #25d366, #128c7e);
   color: var(--white);
