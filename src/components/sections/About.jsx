@@ -5,13 +5,6 @@ import LazyImage from '../ui/LazyImage';
 import Icon from '../ui/Icon';
 import { whatsappLink } from '../../utils/whatsapp';
 
-const stats = [
-  { value: '10+', label: 'Years of expertise' },
-  { value: '50+', label: 'Signature treatments' },
-  { value: '4.5★', label: 'Google rating' },
-  { value: '5000+', label: 'Happy clients' },
-];
-
 // Threading-led imagery — our signature craft leads the Our Story visual.
 // A1 is the salon's own threading photo (in /public/images).
 const A1 = '/images/our-story-threading.jpg';
@@ -88,16 +81,7 @@ export default function About() {
             </ul>
           </Reveal>
 
-          <Reveal delay={0.34} className="about__stats">
-            {stats.map((s) => (
-              <div className="about__stat" key={s.label}>
-                <strong className="gold-text">{s.value}</strong>
-                <span>{s.label}</span>
-              </div>
-            ))}
-          </Reveal>
-
-          <Reveal delay={0.4}>
+          <Reveal delay={0.34}>
             <Button href={whatsappLink()} variant="dark" icon="whatsapp">
               Book your visit
             </Button>
