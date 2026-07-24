@@ -9,7 +9,6 @@ const About = lazy(() => import('./components/sections/About'));
 const Services = lazy(() => import('./components/sections/Services'));
 const Pricing = lazy(() => import('./components/sections/Pricing'));
 const WhyChooseUs = lazy(() => import('./components/sections/WhyChooseUs'));
-const Testimonials = lazy(() => import('./components/sections/Testimonials'));
 const Gallery = lazy(() => import('./components/sections/Gallery'));
 const CTABand = lazy(() => import('./components/sections/CTABand'));
 const Contact = lazy(() => import('./components/sections/Contact'));
@@ -33,7 +32,6 @@ export default function App() {
           <Services />
           <Pricing />
           <WhyChooseUs />
-          <Testimonials />
           <Gallery />
           <CTABand />
           <Contact />

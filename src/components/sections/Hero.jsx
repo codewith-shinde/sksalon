@@ -99,13 +99,6 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 1 }}
           >
-            <div className="hero__rating">
-              <Stars rating={business.rating} size={18} />
-              <span>
-                <strong>{business.rating}★</strong> Google rating
-              </span>
-            </div>
-            <span className="hero__divider" />
             <span className="hero__trust-item">
               <Icon name="mapPin" size={16} /> 10 Colliergate, York
             </span>
